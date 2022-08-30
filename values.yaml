@@ -1,0 +1,45 @@
+size: medium
+apps: monitor
+enableNetworkPolicy: false
+elasticsearch:
+  enableMetrics: true
+  useES6: true
+sysdig:
+  nats:
+    secure:
+      enabled: true
+    ha:
+      enabled: true
+  secure:
+    overview:
+      enabledForDefaultCust: false
+      enabled: false
+    compliance:
+      enabled: false
+    policies:
+      enabled: false
+    rapidResponse:
+      enabled: false
+    netsec:
+      enabled: true
+    apiDocs:
+      enabled: false
+  cassandra:
+    useCassandra3: true
+    enableMetrics: true
+    secure: true
+    ssl: true
+  meerkat:
+    enabled: true
+    collectorDeployments: 2
+    datastreamEnabled: true
+  beacon:
+    promEnabled: true
+    platformMetricsEnabled: true
+  prometheus:
+    enabled: true
+  alertingSystem:
+    enabled: true
+  redisHa: true
+  serviceOwnerManagement:
+    enabled: true
